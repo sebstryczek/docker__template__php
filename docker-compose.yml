@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  php-apache:
+    build:
+      context: .
+      dockerfile: ./docker/php/Dockerfile
+      # no_cache: true
+    container_name: php-apache
+    restart: unless-stopped
+    tty: true
+    environment:
+      DOMAINS: ""
+    ports:
+      - "443:443"
+    volumes:
+      - ./src:/var/www/html
