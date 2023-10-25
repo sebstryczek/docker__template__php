@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: ./docker/php/Dockerfile
-      # no_cache: true
+      no_cache: ${NO_CACHE}
     container_name: php-apache
     restart: unless-stopped
     tty: true

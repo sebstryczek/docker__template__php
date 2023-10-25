@@ -1,0 +1,1 @@
+NO_CACHE=true BUILDKIT_PROGRESS=plain docker compose up --build
